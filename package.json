@@ -1,0 +1,29 @@
+{
+  "name": "crud-api-nodejs",
+  "version": "1.0.0",
+  "description": "This is RSSchool nodejs course task",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vadimshidlov/crud-api.git"
+  },
+  "author": "https://github.com/Vadimshidlov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vadimshidlov/crud-api/issues"
+  },
+  "homepage": "https://github.com/Vadimshidlov/crud-api#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1"
+  }
+}
