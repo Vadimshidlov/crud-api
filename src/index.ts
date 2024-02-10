@@ -3,7 +3,7 @@ import { users } from './users/users';
 import http from 'http';
 import dotenv from 'dotenv';
 
-dotenv.config();
+// dotenv.config();
 
 const appController = new AppController();
 
