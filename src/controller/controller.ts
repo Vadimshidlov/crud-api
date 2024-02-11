@@ -20,7 +20,7 @@ export class AppController {
                 res.write(JSON.stringify(users));
                 res.end();
             } else if (baseUrl === '/api/users' && userId && uuidValidate(userId)) {
-                let [singleUser] = users.filter((user) => user.id === userId);
+                const [singleUser] = users.filter((user) => user.id === userId);
 
                 if (singleUser) {
                     res.statusCode = 200;
@@ -102,7 +102,7 @@ export class AppController {
             const userId = arrayFromUrl ? arrayFromUrl[arrayFromUrl.length - 1] : '';
 
             if (baseUrl === '/api/users' && userId && uuidValidate(userId)) {
-                let [singleUser] = users.filter((user) => user.id === userId);
+                const [singleUser] = users.filter((user) => user.id === userId);
 
                 const indexOfDeleteUser = users.findIndex((user) => user.id === userId);
 
