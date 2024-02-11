@@ -1,20 +1,27 @@
 import { AppController } from './controller/controller';
-import { users } from './users/users';
 import http from 'http';
 import dotenv from 'dotenv';
 
-// dotenv.config();
+dotenv.config();
 
 const appController = new AppController();
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 4001;
 
 const server = http.createServer((req, res) => {
     switch (req.method) {
         case 'GET':
             appController.getUsers(req, res);
             break;
-
+        case 'POST':
+            appController.postUser(req, res);
+            break;
+        case 'DELETE':
+            appController.deleteUser(req, res);
+            break;
+        case 'PUT':
+            appController.putUser(req, res);
+            break;
         default:
             res.statusCode = 404;
             res.setHeader('Content-type', 'application/json');

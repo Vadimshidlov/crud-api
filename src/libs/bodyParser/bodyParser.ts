@@ -1,6 +1,7 @@
 import http from 'http';
+import { BodyUserType } from 'users/users';
 
-export default function bodyParser(request: http.IncomingMessage) {
+export default async function bodyParser(request: http.IncomingMessage): Promise<BodyUserType> {
     return new Promise((resolve, reject) => {
         try {
             let body = '';
@@ -9,12 +10,14 @@ export default function bodyParser(request: http.IncomingMessage) {
                 body += chunk;
             });
 
+            request.on('error', (error) => {
+                reject(error);
+            });
+
             request.on('end', () => {
                 resolve(JSON.parse(body));
             });
         } catch (error) {
-            console.log(error);
-
             reject(error);
         }
     });

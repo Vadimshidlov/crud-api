@@ -9,31 +9,29 @@ export type UserType = {
     hobbies: string[];
 };
 
+export type BodyUserType = Omit<UserType, 'id'>;
+
 export const users: UserType[] = [
     {
         userName: 'Vadim',
-        // id: 'asdasd',
         id: uuidv4(),
         age: 26,
         hobbies: ['Gym', 'Boxing', 'Books', 'Fishing', 'Programming', 'Nature'],
     },
     {
         userName: 'Oleg',
-        // id: 'asdasd2',
         id: uuidv4(),
         age: 26,
         hobbies: ['Gym', 'Boxing', 'Books', 'Fishing', 'Programming', 'Nature'],
     },
     {
         userName: 'Peter',
-        // id: 'asdasd3',
         id: uuidv4(),
         age: 26,
         hobbies: ['Gym', 'Boxing', 'Books', 'Fishing', 'Programming', 'Nature'],
     },
     {
         userName: 'John',
-        // id: 'asdasd4',
         id: uuidv4(),
         age: 26,
         hobbies: ['Gym', 'Boxing', 'Books', 'Fishing', 'Programming', 'Nature'],
