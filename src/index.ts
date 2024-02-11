@@ -8,7 +8,7 @@ const appController = new AppController();
 
 const PORT = process.env.PORT || 4001;
 
-const server = http.createServer((req, res) => {
+export const server = http.createServer((req, res) => {
     switch (req.method) {
         case 'GET':
             appController.getUsers(req, res);
