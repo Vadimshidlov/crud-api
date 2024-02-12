@@ -3,9 +3,8 @@
     "version": "1.0.0",
     "description": "This is RSSchool nodejs course task",
     "main": "index.js",
-    "type": "module",
     "scripts": {
-        "start:dev": "nodemon -I --exec node --experimental-specifier-resolution=node  --loader ts-node/esm src/index.ts",
+        "start:dev": "nodemon --exec ts-node src/index.ts",
         "start:prod": "tsc && node dist/index.js",
         "test": "jest"
     },
@@ -20,6 +19,7 @@
     },
     "homepage": "https://github.com/Vadimshidlov/crud-api#readme",
     "devDependencies": {
+        "@types/body-parser": "^1.19.5",
         "@types/jest": "^29.5.12",
         "@types/node": "^20.11.17",
         "@types/supertest": "^6.0.2",

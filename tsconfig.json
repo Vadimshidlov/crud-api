@@ -3,9 +3,10 @@
         "baseUrl": "src",
         "forceConsistentCasingInFileNames": true,
         "allowSyntheticDefaultImports": true,
+        "allowJs": true,
         "esModuleInterop": true,
         "lib": ["ESNext"],
-        "module": "ESNext",
+        "module": "CommonJS",
         "moduleResolution": "Node",
         "noUncheckedIndexedAccess": true,
         "strictNullChecks": true,
@@ -21,6 +22,6 @@
         "strictPropertyInitialization": false,
         "target": "ES6"
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "./dist/index.js"],
     "exclude": ["node_modules"]
 }
