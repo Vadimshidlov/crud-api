@@ -1,7 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
 
-console.log('For test:', uuidv4());
-
 export type UserType = {
     id: string;
     userName: string;
