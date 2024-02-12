@@ -8,7 +8,6 @@ export class AppController {
     public getUsers(req: http.IncomingMessage, res: http.ServerResponse<http.IncomingMessage>) {
         try {
             const baseUrl = req.url?.slice(0, req.url.lastIndexOf('/'));
-            console.log(baseUrl);
 
             const arrayFromUrl = req.url?.split('/');
 
@@ -62,7 +61,6 @@ export class AppController {
 
                         res.writeHead(201, { 'Content-type': 'application/json' });
                         res.end(JSON.stringify(newUser));
-                        console.log(body);
                     } else {
                         res.writeHead(400, { 'Content-type': 'application/json' });
                         res.end(
@@ -73,8 +71,6 @@ export class AppController {
                         );
                     }
                 } catch (error) {
-                    console.log('Before crash 2');
-
                     res.writeHead(400, { 'Content-type': 'application/json' });
                     res.end(
                         JSON.stringify({
